@@ -1,6 +1,9 @@
 @charset "utf-8";
 /* CSS Document */
 
+form {
+    text-align: left; 
+}
 
 body {
     font-family: Arial, sans-serif;
@@ -11,34 +14,42 @@ body {
 
 
 /* Navbar styles */
-.primary_header {
-	width: 100%;
-	background-color: lightblue;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	clear: left;
-	border-bottom: 2px solid #2C9AB7;
-}
-
-nav {
-	position: fixed;
-	right: 0;
-	top: 0;
-	width: 200px;
-	height: 100%;
-	background-color: lightblue;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+.navbar {
+    background-color: #0047AB !important;
 }
 
 .navbar-brand {
-    font-size: 1.5em;
+    color: #ffffff !important;
+    font-weight: bold;
 }
 
-.nav-link {
-    font-size: 1.1em;
+.navbar-nav .nav-link {
+    color: #ffffff !important;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #89CFF0 !important;
+}
+
+.container {
+    max-width: 800px;
+    margin-top: 80px;
+    text-align: center;
+    padding: 40px;
+    background-color: #0047AB;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-title {
+    font-size: 65px; 
+}
+
+.welcome-slogan {
+     font-weight: bold;
+     color: #89CFF0
 }
 
 /* Heading styles */
@@ -59,6 +70,11 @@ h3 {
     margin-top: 5px;
 }
 
+h4 {
+    text-align: center;
+    color: #ffffff
+}
+
 /* Form styles */
 form {
     max-width: 600px;
@@ -75,25 +91,28 @@ label {
     font-weight: bold;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-input[type="number"],
-input[type="submit"] {
-    width: 100%;
+.submit-button {
+    background-color: #0047AB; 
+    color: white;
+    font-weight: bold;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px; 
+}
+
+.submit-button:hover {
+    background-color: #89CFF0; 
+}
+
+input[type="text"], input[type="email"], input[type="tel"], input[type="number"] {
     padding: 10px;
     margin-bottom: 10px;
-    border: 1px solid #ced4da;
+    border: 1px solid #ccc;
     border-radius: 5px;
+    width: 100%; 
+    box-sizing: border-box;
 }
 
-input[type="submit"] {
-    background-color: #28a745;
-    color: #ffffff;
-    border: none;
-    cursor: pointer;
-}
-
-input[type="submit"]:hover {
-    background-color: #218838;
-}
